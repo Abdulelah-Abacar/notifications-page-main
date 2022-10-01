@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Notifications page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <section class="notifications_stat">
+      <h1 class="notification_number">Notifications <span class="number">3</span></h1>
+      <button class="mark_as_read">Marke all as read</button>
+    </section>
+    <section class="notifications">
+      <div class="notification unread">
+        <div class="img"><img src="assets/images/avatar-mark-webber.webp" alt="Mark Webber"></div>
+        <div class="text">
+          <div class="info">
+            <h2 class="name">Mark Webber</h2>
+            <p class="what-sender-did">reacted to your recent post</p>
+            <div class="react-with">My first tournament today!</div>
+            <span class="unread-point"></span>
+          </div>
+          <div class="send_time">1m ago</div>
+        </div>
+      </div>
+      <div class="notification unread">
+        <div class="img"><img src="assets/images/avatar-angela-gray.webp" alt="Angela Gray"></div>
+        <div class="text">
+          <div class="info">
+            <h2 class="name">Angela Gray</h2>
+            <p class="what-sender-did">followed you</p>
+            <div class="react-with"></div>
+            <span class="unread-point"></span>
+          </div>
+          <div class="send_time">5m ago</div>
+        </div>
+      </div>
+      <div class="notification unread">
+        <div class="img"><img src="assets/images/avatar-jacob-thompson.webp" alt="Jacob Thompson"></div>
+        <div class="text">
+          <div class="info">
+            <h2 class="name">Jacob Thompson</h2>
+            <p class="what-sender-did">has joined your group</p>
+            <div class="react-with">Chess Club</div>
+            <span class="unread-point"></span>
+          </div>
+          <div class="send_time">1 day ago</div>
+        </div>
+      </div>
+      <div class="notification mes read">
+        <div class="img"><img src="assets/images/avatar-rizky-hasanuddin.webp" alt="Rizky Hasanuddin"></div>
+        <div class="text">
+          <div class="info">
+            <h2 class="name">Rizky Hasanuddin</h2>
+            <p class="what-sender-did">sent you a private message</p>
+            <div class="react-with"></div>
+            <span class="unread-point"></span>
+          </div>
+          <div class="send_time">5 days ago</div>
+          <div class="message">
+            Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and 
+            I'm already having lots of fun and improving my game.
+          </div>
+        </div>
+      </div>
+      <div class="notification read">
+        <div class="img"><img src="assets/images/avatar-kimberly-smith.webp" alt="Kimberly Smith"></div>
+        <div class="text">
+          <div class="info">
+            <h2 class="name">Kimberly Smith</h2>
+            <p class="what-sender-did">commented <br> on your picture</p>
+            <div class="react-with"><img src="assets/images/image-chess.webp" alt=""></div>
+            <span class="unread-point"></span>
+          </div>
+          <div class="send_time">1 week ago</div>
+        </div>
+      </div>
+      <div class="notification read">
+        <div class="img"><img src="assets/images/avatar-nathan-peterson.webp" alt="Nathan Peterson"></div>
+        <div class="text">
+          <div class="info">
+            <h2 class="name">Nathan Peterson</h2>
+            <p class="what-sender-did">reacted to your recent post</p>
+            <div class="react-with">5 end-game strategies to increase your win rate</div>
+            <span class="unread-point"></span>
+          </div>
+          <div class="send_time">2 weeks ago</div>
+        </div>
+      </div>
+      <div class="notification read">
+        <div class="img"><img src="assets/images/avatar-anna-kim.webp" alt="Anna Kim"></div>
+        <div class="text">
+          <div class="info">
+            <h2 class="name">Anna Kim</h2>
+            <p class="what-sender-did">left the group</p>
+            <div class="react-with">Chess Club</div>
+            <span class="unread-point"></span>
+          </div>
+          <div class="send_time">2 weeks ago</div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>

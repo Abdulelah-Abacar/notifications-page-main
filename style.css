@@ -1,0 +1,187 @@
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("assets/fonts/PlusJakartaSans-VariableFont_wght.ttf");
+  src: url('assets/fonts/static/PlusJakartaSans-ExtraBold.ttf') format('truetype'),
+       url('assets/fonts/static/PlusJakartaSans-Medium.ttf') format('truetype'),
+}
+* {
+  border: none;
+  outline: none;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  -ms-user-select: none;
+  user-select: none;
+}
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Red: hsl(1, 90%, 64%);
+  --Blue: hsl(219, 85%, 26%);
+  --Very-light-grayish-blue: hsl(210, 60%, 98%);
+  --Light-grayish-blue-1: hsl(211, 68%, 94%);
+  --Light-grayish-blue-2: hsl(205, 33%, 90%);
+  --Grayish-blue: hsl(219, 14%, 63%);
+  --Dark-grayish-blue: hsl(219, 12%, 42%);
+  --Very-dark-blue: hsl(224, 21%, 14%);
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  min-height: 100vh;
+  font-size: 1.6rem;
+  background-color: var(--Very-light-grayish-blue);
+  display: grid;
+  place-content: center;
+}
+.container .notifications .unread {
+  background-color: var(--Light-grayish-blue-2);
+}
+.container .notifications .read {
+  background-color: var(--White);
+}
+.container {
+  width: 65rem;
+  height: fit-content;
+  margin: 5rem 0;
+  padding: 2rem;
+  background-color: var(--White);
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 1.5rem #cccccc;
+}
+@media (max-width: 767px) {
+  .container {
+    width: 100%;
+    height: fit-content;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
+.container .notifications_stat {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container .notifications_stat h1 span {
+  background-color: var(--Blue);
+  color: var(--White);
+  padding: .2rem .8rem;
+  display: inline-block;
+  border-radius: .4rem;
+  font-size: 1.3rem;
+}
+.container .notifications_stat .mark_as_read {
+  background-color: #0000;
+  cursor: pointer;
+  color: var(--Grayish-blue);
+  font-weight: 500;
+  transition: all .3s;
+  font-size: 1.6rem;
+}
+.container .notifications_stat .mark_as_read:hover {
+  color: var(--Blue);
+  font-weight: 800;
+}
+.container .notifications {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+.container .notifications .notification {
+  display: flex;
+  padding: 1rem;
+  border-radius: 1rem;
+  position: relative;
+  cursor: pointer;
+}
+.container .notifications .notification .img {
+  margin-right: 1rem;
+  min-width: 4rem;
+  max-width: 4.1rem;
+  height: 100%;
+}
+.container .notifications .notification .img img {
+  max-width: 100%;
+}
+.container .notifications .notification .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+/* .container .notifications .notification .text .info {
+} */
+.container .notifications .notification .text .info > * {
+  display: inline;
+}
+.container .notifications .notification .text .info .name {
+  font-size: 1.6rem;
+  margin-right: .1rem;
+  cursor: pointer;
+}
+.container .notifications .notification .text .info .name:hover {
+  color: var(--Blue);
+}
+.container .notifications .notification .text .info .what-sender-did {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--Grayish-blue);
+  margin-right: .1rem;
+}
+.container .notifications .notification .text .info .what-sender-did br {
+  display: none;
+}
+@media (max-width: 767px) {
+  .container .notifications .notification .text .info .what-sender-did br {
+    display: block;
+  }
+}
+.container .notifications .notification:not(.mes) .text .info .react-with {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--Grayish-blue);
+  cursor: pointer;
+}
+.container .notifications .notification:not(.mes) .text .info .react-with img {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  max-width: 70%;
+  max-height: 70%;
+}
+.container .notifications .notification:not(.mes) .text .info .react-with:hover {
+  color: var(--Blue);
+}
+.container .notifications .notification.mes .text .message {
+  border: .1rem solid var(--Light-grayish-blue-2);
+  padding: 1rem;
+  border-radius: .5rem;
+  color: var(--Grayish-blue);
+  cursor: pointer;
+  font-weight: 500;
+  transition: all .5s;
+}
+.container .notifications .notification.mes .text .message:hover {
+  background-color: var(--Light-grayish-blue-2);
+}
+.container .notifications .notification.unread .unread-point {
+  display: inline-block;
+  width: .7rem;
+  height: .7rem;
+  border-radius: 50%;
+  background-color: var(--Red);
+}
+.container .notifications .notification .text .send_time {
+  color: var(--Grayish-blue);
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+.container .notifications .notification.mes .text .send_time {
+  margin: .5rem 0;
+}
